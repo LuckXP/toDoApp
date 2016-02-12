@@ -16,8 +16,6 @@ toDos.forEach(function(todo){
 				</tr>');
 })
 
-
-
 function toToDo(event){
 	event.preventDefault();
 	var $element = $(event.target);
@@ -26,7 +24,6 @@ function toToDo(event){
 	var taskName = $("#taskName").val();
 	var dueDate = $("#dueDate").val();
 	
-
 	if(taskName && dueDate) {
 
 		$list.append('<tr>\
@@ -38,20 +35,16 @@ function toToDo(event){
 							<button type="button" class="btn btn-primary deleteToDo">Done</button>\
 						</td>\
 					</tr>');
-		
+
 		$('.deleteToDo').on('click', deleteToDo);
 	}	
 	return false;
-
 }
 
 var deleteToDo = function(event) {
 	event.preventDefault();
 	$(event.target).closest('tr').remove();
 }
-
-
-
 
 $('#submit-button').on('click', toToDo);
 $('.deleteToDo').on('click', deleteToDo);
@@ -71,22 +64,6 @@ $('.deleteToDo').on('click', deleteToDo);
 // };
 
 // $('.unique-check').on('click',findCheck);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // function youdidit(){
